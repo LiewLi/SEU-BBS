@@ -14,7 +14,7 @@
 #import "DLBoardCollectionViewCell.h"
 #import "DLTimer.h"
 #import "DLBoardViewController.h"
-@import CoreImage;
+#import <CoreImage/CoreImage.h>
 
 
 @interface DLSectionsViewController()
@@ -40,6 +40,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.13 green:0.36 blue:0.62 alpha:1.0];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -66,11 +67,12 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
     [super viewWillAppear:animated];
-    if (self.sidePanelController.state == JASidePanelLeftVisible) {
-        [self.sidePanelController toggleLeftPanel:self];
-    }
-    [self.collectionViewLayout invalidateLayout];
+//    if (self.sidePanelController.state == JASidePanelLeftVisible) {
+//        [self.sidePanelController toggleLeftPanel:self];
+//    }
+//    [self.collectionViewLayout invalidateLayout];
     
 }
 
@@ -91,7 +93,11 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.boards.count;
+    if (self.boards) {
+        return self.boards.count;
+    } else {
+        return 0;
+    }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

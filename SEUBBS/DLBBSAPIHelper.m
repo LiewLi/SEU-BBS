@@ -187,25 +187,47 @@ static NSString *rootURL = @"http://bbs.seu.edu.cn/api/";
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *jsonDict = (NSDictionary *)responseObject;
         NSMutableDictionary *userInfo = [[NSMutableDictionary alloc]init];
-        NSString* imageLoc = (jsonDict[@"user"])[@"avatar"];
-        imageLoc = [imageLoc stringByReplacingOccurrencesOfString:@"wForum" withString:@"nForum"];
-        if ([imageLoc compare:@"http://bbs.edu.edu.cn/nForum"] == NSOrderedSame) {
-            [userInfo setObject:[NSNull null] forKey:@"avatar"];
-        } else {
-            [userInfo setObject:imageLoc forKey:@"avatar"];
-        }
-        if (jsonDict[@"user"][@"gender"]) {
-            [userInfo setObject:jsonDict[@"user"][@"gender"] forKey:@"gender"];
-        } else {
-            [userInfo setObject:@"U" forKey:@"gender"];
-        }
+        BOOL success = [jsonDict[@"success"] boolValue];
+        if (success) {
+            NSString* imageLoc = (jsonDict[@"user"])[@"avatar"];
+            imageLoc = [imageLoc stringByReplacingOccurrencesOfString:@"wForum" withString:@"nForum"];
+            if ([imageLoc compare:@"http://bbs.seu.edu.cn/nForum/"] == NSOrderedSame) {
+                [userInfo setObject:[NSNull null] forKey:@"avatar"];
+            } else {
+                [userInfo setObject:imageLoc forKey:@"avatar"];
+            }
+            if (jsonDict[@"user"][@"gender"]) {
+                [userInfo setObject:jsonDict[@"user"][@"gender"] forKey:@"gender"];
+            } else {
+                [userInfo setObject:@"U" forKey:@"gender"];
+            }
 
-        NSInteger exp = [(NSNumber *) jsonDict[@"user"][@"experience"] integerValue];
-        NSString *expStr = [NSString stringWithFormat:@"%ld", exp];
-        [userInfo setObject:expStr forKey:@"experience"];
-       // NSLog(@"%@ : %@ : %@\n", userInfo[@"avatar"], userInfo[@"gender"], userInfo[@"experience"]);
-        if (block) {
-            block(userInfo, nil);
+            NSInteger exp = [(NSNumber *) jsonDict[@"user"][@"experience"] integerValue];
+            NSString *expStr = [NSString stringWithFormat:@"%ld", exp];
+            [userInfo setObject:expStr forKey:@"experience"];
+            [userInfo setObject:jsonDict[@"user"][@"name"] forKey:@"name"];
+            if (jsonDict[@"user"][@"astro"]) {
+                [userInfo setObject:jsonDict[@"user"][@"astro"] forKey:@"astro"];
+            }
+            if (jsonDict[@"user"][@"level"]) {
+                userInfo[@"level"] = jsonDict[@"user"][@"level"];
+            }
+            if (jsonDict[@"user"][@"posts"]) {
+                userInfo[@"posts"] = [NSString stringWithFormat:@"%ld", [jsonDict[@"user"][@"posts"] integerValue] ];
+            }
+            if (jsonDict[@"user"][@"perform"]) {
+                userInfo[@"perform"] = [NSString stringWithFormat:@"%ld", [jsonDict[@"user"][@"perform"] integerValue] ];
+            }
+
+            if (block) {
+                block(userInfo, nil);
+            }
+        } else {
+            if (block) {
+                NSLog(@"%@", @"该用户不存在");
+                block(nil, nil);
+            }
+
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

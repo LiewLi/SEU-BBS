@@ -13,6 +13,7 @@
 #import "DLBBSAPIHelper.h"
 #import "DLBoardModel.h"
 #import "DLFriendsViewController.h"
+#import "DLHotTenViewController.h"
 
 @implementation DLNavigationPanelViewController
 
@@ -49,7 +50,7 @@
     
     
     if (self.masterFeedsButton.selected) {
-        DLNavigationPanelViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"HotTenViewController"];
+        DLHotTenViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"HotTenViewController"];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         self.sidePanelController.centerPanel = nav;
     }
@@ -58,7 +59,7 @@
         DLSectionsViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DLSectionsViewController"];
         vc.title = @"分类讨论区";
         [DLBBSAPIHelper fetchSectionsInfoWithComplete:^(NSArray *sections, NSError *error) {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 vc.boards = [[NSMutableArray alloc]init];
                 for (NSDictionary *section in sections) {
                     DLBoardModel *model = [[DLBoardModel alloc]initWithInfo:section];
@@ -68,7 +69,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [vc.collectionView reloadData];
                 });
-            });
+//            });
         }];
 
         

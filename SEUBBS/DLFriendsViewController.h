@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DLFriendsViewController :UITableViewController
-
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

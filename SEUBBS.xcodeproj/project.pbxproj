@@ -57,6 +57,9 @@
 		B19030721971626A0087A527 /* DLFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19030701971626A0087A527 /* DLFriendsViewController.m */; };
 		B190307519716BA60087A527 /* DLFriendsTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B190307319716BA60087A527 /* DLFriendsTableViewCell.h */; };
 		B190307619716BA60087A527 /* DLFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B190307419716BA60087A527 /* DLFriendsTableViewCell.m */; };
+		B19030791972A1820087A527 /* DLAddFriendPopOverViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B19030771972A1820087A527 /* DLAddFriendPopOverViewController.h */; };
+		B190307A1972A1820087A527 /* DLAddFriendPopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19030781972A1820087A527 /* DLAddFriendPopOverViewController.m */; };
+		B190307C1972E8500087A527 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190307B1972E8500087A527 /* CoreImage.framework */; };
 		B1A4D392196C070100997DDA /* MultiPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4D391196C070100997DDA /* MultiPhotoViewController.m */; };
 		B1A4D397196C071500997DDA /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4D394196C071500997DDA /* ImageScrollView.m */; };
 		B1A4D398196C071500997DDA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4D396196C071500997DDA /* PhotoViewController.m */; };
@@ -159,6 +162,9 @@
 		B19030701971626A0087A527 /* DLFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFriendsViewController.m; sourceTree = "<group>"; };
 		B190307319716BA60087A527 /* DLFriendsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLFriendsTableViewCell.h; sourceTree = "<group>"; };
 		B190307419716BA60087A527 /* DLFriendsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLFriendsTableViewCell.m; sourceTree = "<group>"; };
+		B19030771972A1820087A527 /* DLAddFriendPopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAddFriendPopOverViewController.h; sourceTree = "<group>"; };
+		B19030781972A1820087A527 /* DLAddFriendPopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAddFriendPopOverViewController.m; sourceTree = "<group>"; };
+		B190307B1972E8500087A527 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		B1A4D390196C070100997DDA /* MultiPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPhotoViewController.h; sourceTree = "<group>"; };
 		B1A4D391196C070100997DDA /* MultiPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoViewController.m; sourceTree = "<group>"; };
 		B1A4D393196C071500997DDA /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
@@ -191,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B190307C1972E8500087A527 /* CoreImage.framework in Frameworks */,
 				B1F8B710196EFEDF002BC155 /* libGPUImage.a in Frameworks */,
 				B1CCDECD196E3EB000B1A3F3 /* libMBProgressHUD.a in Frameworks */,
 				B132DD8E1962A2DD008C15B4 /* CoreGraphics.framework in Frameworks */,
@@ -262,6 +269,7 @@
 		B132DD8A1962A2DD008C15B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B190307B1972E8500087A527 /* CoreImage.framework */,
 				B1F8B70F196EFEDF002BC155 /* libGPUImage.a */,
 				B1D8D523196E3DB30038CE69 /* libMBProgressHUD.a */,
 				B132DD8B1962A2DD008C15B4 /* Foundation.framework */,
@@ -393,6 +401,8 @@
 				B19030701971626A0087A527 /* DLFriendsViewController.m */,
 				B190307319716BA60087A527 /* DLFriendsTableViewCell.h */,
 				B190307419716BA60087A527 /* DLFriendsTableViewCell.m */,
+				B19030771972A1820087A527 /* DLAddFriendPopOverViewController.h */,
+				B19030781972A1820087A527 /* DLAddFriendPopOverViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -446,6 +456,7 @@
 				B153B1AF1971134900D60CF9 /* DLBoardTableViewCell.h in Headers */,
 				B153B1A31971084700D60CF9 /* DLBoardFetcher.h in Headers */,
 				B190307519716BA60087A527 /* DLFriendsTableViewCell.h in Headers */,
+				B19030791972A1820087A527 /* DLAddFriendPopOverViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +611,7 @@
 			files = (
 				B153B1A41971084700D60CF9 /* DLBoardFetcher.m in Sources */,
 				B11E8811196B0FB40054DD17 /* ELCAssetCell.m in Sources */,
+				B190307A1972A1820087A527 /* DLAddFriendPopOverViewController.m in Sources */,
 				B14C23771965B01800BBCE1E /* DLPostTableViewCell.m in Sources */,
 				B132DD9C1962A2DD008C15B4 /* DLAppDelegate.m in Sources */,
 				B14C2367196574EF00BBCE1E /* DLPostModel.m in Sources */,
