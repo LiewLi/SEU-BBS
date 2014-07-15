@@ -14,6 +14,7 @@
 #import "DLBoardModel.h"
 #import "DLFriendsViewController.h"
 #import "DLHotTenViewController.h"
+#import "DLMailboxViewController.h"
 
 @implementation DLNavigationPanelViewController
 
@@ -37,6 +38,7 @@
     self.masterFeedsButton.selected = YES;
     [self.sectionsButton setImage:[UIImage imageNamed:@"sectionsPressed"] forState:UIControlStateSelected];
     [self.friendsButton setImage:[UIImage imageNamed:@"friendsIconPressed"] forState:UIControlStateSelected];
+    [self.messageButton setImage:[UIImage imageNamed:@"messagePressed"] forState:UIControlStateSelected];
     
 }
 
@@ -81,6 +83,13 @@
         
         UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
         self.sidePanelController.centerPanel = nav;
+    }
+    
+    else if (sender == self.messageButton) {
+        DLMailboxViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DLMailboxViewController"];
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+        self.sidePanelController.centerPanel = nav;
+        
     }
     
 }

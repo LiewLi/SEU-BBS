@@ -28,4 +28,8 @@
 + (void)fetchFriendsWithComplete:(void(^)(NSArray *friends, NSError *error))block;
 + (void)deleteFriend:(NSString *)userID withComplete:(void(^)(BOOL success, NSError *error))block;
 + (void)addFriend:(NSString *)userID withComplete:(void(^)(BOOL success, NSError *error))block;
++ (NSURL *)mailboxURLForType:(NSInteger)type start:(NSInteger)start limit:(NSInteger)limit;
++ (void) mailContentForID:(NSInteger)mailID ofMailboxType:(NSInteger)type complete:(void (^)(BOOL, NSString *))block;
++ (void)sendMessageTo:(NSString *)userID reid:(NSInteger)reid title:(NSString *)title content:(NSString *)content complete:(void(^)(BOOL success))block;
++ (void)deleteMailFor:(NSInteger)mailID type:(NSInteger)mailboxType complete:(void(^)(BOOL))block;
 @end

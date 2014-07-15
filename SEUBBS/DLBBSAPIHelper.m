@@ -17,6 +17,82 @@ static NSString *rootURL = @"http://bbs.seu.edu.cn/api/";
 
 @implementation DLBBSAPIHelper
 
++(void)deleteMailFor:(NSInteger)mailID type:(NSInteger)mailboxType complete:(void (^)(BOOL))block
+{
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"TOKEN"];
+    NSString *urlStr = [NSString stringWithFormat:@"http://bbs.seu.edu.cn/api/mail/delete.json?token=%@&id=%ld&type=%ld", token, mailID, mailboxType];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:url]];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *jsonDict = responseObject;
+        BOOL success = jsonDict[@"success"];
+        if (block) {
+            block(success);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) {
+            block(NO);
+        }
+    }];
+    
+    [operation start];
+}
+
++ (void)sendMessageTo:(NSString *)userID reid:(NSInteger)reid title:(NSString *)title content:(NSString *)content complete:(void (^)(BOOL))block
+{
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"TOKEN"];
+    NSString *urlStr = [NSString stringWithFormat:@"http://bbs.seu.edu.cn/api/mail/send.json?token=%@&user=%@&title=%@&content=%@&reid=%ld", token, userID, title, content, reid];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:url]];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *jsonDict = responseObject;
+        BOOL success = jsonDict[@"success"];
+        if (block) {
+            block(success);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) {
+            block(NO);
+        }
+    }];
+    [operation start];
+    
+}
++ (void)mailContentForID:(NSInteger)mailID ofMailboxType:(NSInteger)type complete:(void (^)(BOOL, NSString *))block
+{
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"TOKEN"];
+    NSString *urlStr = [NSString stringWithFormat:@"http://bbs.seu.edu.cn/api/mail/get.json?token=%@&type=%ld&id=%ld", token, type, mailID];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:[NSURLRequest requestWithURL:url]];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *jsonDict = responseObject;
+        BOOL success = [jsonDict[@"success"] boolValue];
+        if (success) {
+            NSString *content = jsonDict[@"mail"][@"content"];
+            if (block) {
+                block(success, content);
+            }
+        } else {
+            if (block) {
+                block(success, nil);
+            }
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) {
+            block(NO, nil);
+        }
+    }];
+    [operation start];
+}
++ (NSURL *)mailboxURLForType:(NSInteger)type start:(NSInteger)start limit:(NSInteger)limit
+{
+    NSString *token = [[NSUserDefaults standardUserDefaults] stringForKey:@"TOKEN"];
+    NSString *urlStr = [NSString stringWithFormat:@"http://bbs.seu.edu.cn/api/mailbox/get.json?token=%@&type=%ld&start=%ld&limit=%ld", token,type, start, limit];
+    return [NSURL URLWithString:urlStr];
+}
 
 + (void)addFriend:(NSString *)userID withComplete:(void (^)(BOOL, NSError *))block
 {

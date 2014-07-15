@@ -17,5 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *friendsButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *sectionsButton;
+@property (weak, nonatomic) IBOutlet UIButton *messageButton;
 
 @end

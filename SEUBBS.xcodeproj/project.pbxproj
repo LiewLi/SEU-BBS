@@ -60,9 +60,25 @@
 		B19030791972A1820087A527 /* DLAddFriendPopOverViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B19030771972A1820087A527 /* DLAddFriendPopOverViewController.h */; };
 		B190307A1972A1820087A527 /* DLAddFriendPopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19030781972A1820087A527 /* DLAddFriendPopOverViewController.m */; };
 		B190307C1972E8500087A527 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B190307B1972E8500087A527 /* CoreImage.framework */; };
+		B190307F1974FF9D0087A527 /* DLMailboxViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B190307D1974FF9D0087A527 /* DLMailboxViewController.h */; };
+		B19030801974FF9D0087A527 /* DLMailboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B190307E1974FF9D0087A527 /* DLMailboxViewController.m */; };
+		B1903083197502670087A527 /* DLMailboxModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B1903081197502670087A527 /* DLMailboxModel.h */; };
+		B1903084197502670087A527 /* DLMailboxModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1903082197502670087A527 /* DLMailboxModel.m */; };
+		B1903087197506760087A527 /* DLMailboxFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = B1903085197506760087A527 /* DLMailboxFetcher.h */; };
+		B1903088197506760087A527 /* DLMailboxFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = B1903086197506760087A527 /* DLMailboxFetcher.m */; };
+		B190308B1975133A0087A527 /* DLMailboxTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B19030891975133A0087A527 /* DLMailboxTableViewCell.h */; };
+		B190308C1975133A0087A527 /* DLMailboxTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B190308A1975133A0087A527 /* DLMailboxTableViewCell.m */; };
 		B1A4D392196C070100997DDA /* MultiPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4D391196C070100997DDA /* MultiPhotoViewController.m */; };
 		B1A4D397196C071500997DDA /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4D394196C071500997DDA /* ImageScrollView.m */; };
 		B1A4D398196C071500997DDA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1A4D396196C071500997DDA /* PhotoViewController.m */; };
+		B1B6F75D1975429F00A9248C /* DLMailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B6F75B1975429F00A9248C /* DLMailViewController.h */; };
+		B1B6F75E1975429F00A9248C /* DLMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6F75C1975429F00A9248C /* DLMailViewController.m */; };
+		B1B6F761197544EB00A9248C /* DLMailTitleTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B6F75F197544EB00A9248C /* DLMailTitleTableViewCell.h */; };
+		B1B6F762197544EB00A9248C /* DLMailTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6F760197544EB00A9248C /* DLMailTitleTableViewCell.m */; };
+		B1B6F7651975464600A9248C /* DLMailContentTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B6F7631975464600A9248C /* DLMailContentTableViewCell.h */; };
+		B1B6F7661975464600A9248C /* DLMailContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6F7641975464600A9248C /* DLMailContentTableViewCell.m */; };
+		B1B6F76919755D4800A9248C /* DLEditMessageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B6F76719755D4800A9248C /* DLEditMessageViewController.h */; };
+		B1B6F76A19755D4800A9248C /* DLEditMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B6F76819755D4800A9248C /* DLEditMessageViewController.m */; };
 		B1C368B01963D91700655038 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C368AD1963D91700655038 /* JASidePanelController.m */; };
 		B1C368B11963D91700655038 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C368AF1963D91700655038 /* UIViewController+JASidePanel.m */; };
 		B1C368B51963DC5600655038 /* DLHotTenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C368B41963DC5600655038 /* DLHotTenViewController.m */; };
@@ -165,12 +181,28 @@
 		B19030771972A1820087A527 /* DLAddFriendPopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAddFriendPopOverViewController.h; sourceTree = "<group>"; };
 		B19030781972A1820087A527 /* DLAddFriendPopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAddFriendPopOverViewController.m; sourceTree = "<group>"; };
 		B190307B1972E8500087A527 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B190307D1974FF9D0087A527 /* DLMailboxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailboxViewController.h; sourceTree = "<group>"; };
+		B190307E1974FF9D0087A527 /* DLMailboxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailboxViewController.m; sourceTree = "<group>"; };
+		B1903081197502670087A527 /* DLMailboxModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailboxModel.h; sourceTree = "<group>"; };
+		B1903082197502670087A527 /* DLMailboxModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailboxModel.m; sourceTree = "<group>"; };
+		B1903085197506760087A527 /* DLMailboxFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailboxFetcher.h; sourceTree = "<group>"; };
+		B1903086197506760087A527 /* DLMailboxFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailboxFetcher.m; sourceTree = "<group>"; };
+		B19030891975133A0087A527 /* DLMailboxTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailboxTableViewCell.h; sourceTree = "<group>"; };
+		B190308A1975133A0087A527 /* DLMailboxTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailboxTableViewCell.m; sourceTree = "<group>"; };
 		B1A4D390196C070100997DDA /* MultiPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiPhotoViewController.h; sourceTree = "<group>"; };
 		B1A4D391196C070100997DDA /* MultiPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiPhotoViewController.m; sourceTree = "<group>"; };
 		B1A4D393196C071500997DDA /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
 		B1A4D394196C071500997DDA /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
 		B1A4D395196C071500997DDA /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		B1A4D396196C071500997DDA /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		B1B6F75B1975429F00A9248C /* DLMailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailViewController.h; sourceTree = "<group>"; };
+		B1B6F75C1975429F00A9248C /* DLMailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailViewController.m; sourceTree = "<group>"; };
+		B1B6F75F197544EB00A9248C /* DLMailTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailTitleTableViewCell.h; sourceTree = "<group>"; };
+		B1B6F760197544EB00A9248C /* DLMailTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailTitleTableViewCell.m; sourceTree = "<group>"; };
+		B1B6F7631975464600A9248C /* DLMailContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLMailContentTableViewCell.h; sourceTree = "<group>"; };
+		B1B6F7641975464600A9248C /* DLMailContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLMailContentTableViewCell.m; sourceTree = "<group>"; };
+		B1B6F76719755D4800A9248C /* DLEditMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLEditMessageViewController.h; sourceTree = "<group>"; };
+		B1B6F76819755D4800A9248C /* DLEditMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLEditMessageViewController.m; sourceTree = "<group>"; };
 		B1C368AC1963D91700655038 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		B1C368AD1963D91700655038 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		B1C368AE1963D91700655038 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
@@ -346,6 +378,8 @@
 				B182246E196E564F00A67277 /* DLBoardModel.m */,
 				B153B1A519710DE400D60CF9 /* DLBoardTopicModel.h */,
 				B153B1A619710DE400D60CF9 /* DLBoardTopicModel.m */,
+				B1903081197502670087A527 /* DLMailboxModel.h */,
+				B1903082197502670087A527 /* DLMailboxModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,6 +437,18 @@
 				B190307419716BA60087A527 /* DLFriendsTableViewCell.m */,
 				B19030771972A1820087A527 /* DLAddFriendPopOverViewController.h */,
 				B19030781972A1820087A527 /* DLAddFriendPopOverViewController.m */,
+				B190307D1974FF9D0087A527 /* DLMailboxViewController.h */,
+				B190307E1974FF9D0087A527 /* DLMailboxViewController.m */,
+				B19030891975133A0087A527 /* DLMailboxTableViewCell.h */,
+				B190308A1975133A0087A527 /* DLMailboxTableViewCell.m */,
+				B1B6F75B1975429F00A9248C /* DLMailViewController.h */,
+				B1B6F75C1975429F00A9248C /* DLMailViewController.m */,
+				B1B6F75F197544EB00A9248C /* DLMailTitleTableViewCell.h */,
+				B1B6F760197544EB00A9248C /* DLMailTitleTableViewCell.m */,
+				B1B6F7631975464600A9248C /* DLMailContentTableViewCell.h */,
+				B1B6F7641975464600A9248C /* DLMailContentTableViewCell.m */,
+				B1B6F76719755D4800A9248C /* DLEditMessageViewController.h */,
+				B1B6F76819755D4800A9248C /* DLEditMessageViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -414,6 +460,8 @@
 				B14C237D1965C7FA00BBCE1E /* DLTopicPostFetcher.m */,
 				B153B1A11971084700D60CF9 /* DLBoardFetcher.h */,
 				B153B1A21971084700D60CF9 /* DLBoardFetcher.m */,
+				B1903085197506760087A527 /* DLMailboxFetcher.h */,
+				B1903086197506760087A527 /* DLMailboxFetcher.m */,
 			);
 			name = HelperClass;
 			sourceTree = "<group>";
@@ -449,14 +497,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1903087197506760087A527 /* DLMailboxFetcher.h in Headers */,
+				B190308B1975133A0087A527 /* DLMailboxTableViewCell.h in Headers */,
 				B153B1AB1971130800D60CF9 /* DLBoardViewController.h in Headers */,
+				B190307F1974FF9D0087A527 /* DLMailboxViewController.h in Headers */,
+				B1B6F76919755D4800A9248C /* DLEditMessageViewController.h in Headers */,
 				B153B19F1970106400D60CF9 /* DLBoardFlowLayout.h in Headers */,
 				B153B1A719710DE400D60CF9 /* DLBoardTopicModel.h in Headers */,
+				B1B6F7651975464600A9248C /* DLMailContentTableViewCell.h in Headers */,
 				B19030711971626A0087A527 /* DLFriendsViewController.h in Headers */,
 				B153B1AF1971134900D60CF9 /* DLBoardTableViewCell.h in Headers */,
+				B1B6F75D1975429F00A9248C /* DLMailViewController.h in Headers */,
 				B153B1A31971084700D60CF9 /* DLBoardFetcher.h in Headers */,
+				B1B6F761197544EB00A9248C /* DLMailTitleTableViewCell.h in Headers */,
 				B190307519716BA60087A527 /* DLFriendsTableViewCell.h in Headers */,
 				B19030791972A1820087A527 /* DLAddFriendPopOverViewController.h in Headers */,
+				B1903083197502670087A527 /* DLMailboxModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,7 +669,9 @@
 				B11E8811196B0FB40054DD17 /* ELCAssetCell.m in Sources */,
 				B190307A1972A1820087A527 /* DLAddFriendPopOverViewController.m in Sources */,
 				B14C23771965B01800BBCE1E /* DLPostTableViewCell.m in Sources */,
+				B1903084197502670087A527 /* DLMailboxModel.m in Sources */,
 				B132DD9C1962A2DD008C15B4 /* DLAppDelegate.m in Sources */,
+				B1B6F7661975464600A9248C /* DLMailContentTableViewCell.m in Sources */,
 				B14C2367196574EF00BBCE1E /* DLPostModel.m in Sources */,
 				B14C23741965A73C00BBCE1E /* DLPostViewController.m in Sources */,
 				B190307619716BA60087A527 /* DLFriendsTableViewCell.m in Sources */,
@@ -621,10 +679,12 @@
 				B153B1A01970106400D60CF9 /* DLBoardFlowLayout.m in Sources */,
 				B1883B441967184000FB025A /* DLAttachmentModel.m in Sources */,
 				B1C368B11963D91700655038 /* UIViewController+JASidePanel.m in Sources */,
+				B19030801974FF9D0087A527 /* DLMailboxViewController.m in Sources */,
 				B14C236A19657B0600BBCE1E /* DLTopTenModel.m in Sources */,
 				B1A4D397196C071500997DDA /* ImageScrollView.m in Sources */,
 				B1822472196E5A2E00A67277 /* DLSectionsViewController.m in Sources */,
 				B1822475196EE10E00A67277 /* DLBoardCollectionViewCell.m in Sources */,
+				B1903088197506760087A527 /* DLMailboxFetcher.m in Sources */,
 				B19030721971626A0087A527 /* DLFriendsViewController.m in Sources */,
 				B1FA324A1969BA910038090B /* DLPostReplyViewController.m in Sources */,
 				B1A4D398196C071500997DDA /* PhotoViewController.m in Sources */,
@@ -634,10 +694,12 @@
 				B1A4D392196C070100997DDA /* MultiPhotoViewController.m in Sources */,
 				B1C368B81963F97700655038 /* DLHotTenTableViewCell.m in Sources */,
 				B153B1A819710DE400D60CF9 /* DLBoardTopicModel.m in Sources */,
+				B1B6F75E1975429F00A9248C /* DLMailViewController.m in Sources */,
 				B14C23711965A6A300BBCE1E /* UITableViewCell+TableView.m in Sources */,
 				B14C2358196447C900BBCE1E /* DLUserModel.m in Sources */,
 				B182246F196E564F00A67277 /* DLBoardModel.m in Sources */,
 				B11E8812196B0FB40054DD17 /* ELCAssetTablePicker.m in Sources */,
+				B190308C1975133A0087A527 /* DLMailboxTableViewCell.m in Sources */,
 				B132DDC21962A51B008C15B4 /* DLUILoginViewController.m in Sources */,
 				B1D2093F1963B72000C98E75 /* DLNavigationPanelViewController.m in Sources */,
 				B14C23641964914200BBCE1E /* DLTimer.m in Sources */,
@@ -649,6 +711,8 @@
 				B11E8810196B0FB40054DD17 /* ELCAlbumPickerController.m in Sources */,
 				B132DD981962A2DD008C15B4 /* main.m in Sources */,
 				B1DD37B1196859870004F422 /* DLMultipleImageViewController.m in Sources */,
+				B1B6F762197544EB00A9248C /* DLMailTitleTableViewCell.m in Sources */,
+				B1B6F76A19755D4800A9248C /* DLEditMessageViewController.m in Sources */,
 				B11E8814196B0FB40054DD17 /* ELCImagePickerController.m in Sources */,
 				B14C237A1965C70000BBCE1E /* DLTopicPostModel.m in Sources */,
 			);
