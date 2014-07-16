@@ -13,6 +13,7 @@
 #import "DLMailViewController.h"
 #import "DLBBSAPIHelper.h"
 #import <Toast+UIView.h>
+#import "DLEditMessageViewController.h"
 
 @interface DLMailboxViewController ()
 @property (nonatomic, strong)NSMutableArray *mails;
@@ -50,7 +51,9 @@
 
 - (void)composeMessage:(id)sender
 {
-    
+    DLEditMessageViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DLEditMessageViewController"];
+    vc.modalPresentationStyle = UIModalPresentationPageSheet;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 - (void)refresh:(id)sender
 {

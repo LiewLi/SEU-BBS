@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DLEditMessageViewController : UIViewController
-
+@interface DLEditMessageViewController : UITableViewController
+- (IBAction)cancelButtonTapped:(id)sender;
+- (IBAction)sendButtonTapped:(id)sender;
+- (IBAction)addContactButtonTapped:(id)sender;
 @end

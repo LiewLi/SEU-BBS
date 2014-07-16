@@ -771,6 +771,118 @@
             </objects>
             <point key="canvasLocation" x="351" y="-5012"/>
         </scene>
+        <!--Edit Message View Controller-->
+        <scene sceneID="Dyj-uo-pMz">
+            <objects>
+                <tableViewController storyboardIdentifier="DLEditMessageViewController" id="1zi-yP-6cn" customClass="DLEditMessageViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FTC-EW-jgz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zW5-H9-eoa">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="取消" style="plain" id="Ice-5Y-VDv">
+                                    <connections>
+                                        <action selector="cancelButtonTapped:" destination="1zi-yP-6cn" id="P73-xF-ko2"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Mq4-IY-Hzk"/>
+                                <barButtonItem title="发送" style="done" id="6st-Jw-43W">
+                                    <connections>
+                                        <action selector="sendButtonTapped:" destination="1zi-yP-6cn" id="mGW-Jf-Wyv"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DLEditMailTableViewCell" id="Hoz-x9-QSL" customClass="DLEditMailTableViewCell">
+                                <rect key="frame" x="0.0" y="66" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hoz-x9-QSL" id="t6A-l7-8Hz">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3M-02-tG1">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0I8-Ih-uPL">
+                                            <rect key="frame" x="70" y="7" width="664" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5t-RR-G6N">
+                                            <rect key="frame" x="735" y="7" width="25" height="25"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="mYV-CO-Jl9"/>
+                                                <constraint firstAttribute="height" constant="25" id="nfu-0N-ZIN"/>
+                                            </constraints>
+                                            <state key="normal" image="addIcon"/>
+                                            <connections>
+                                                <action selector="addContactButtonTapped:" destination="1zi-yP-6cn" eventType="touchUpInside" id="5Dp-vo-z3D"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Y3M-02-tG1" firstAttribute="leading" secondItem="t6A-l7-8Hz" secondAttribute="leading" constant="20" id="5pl-SU-ddP"/>
+                                        <constraint firstItem="Y3M-02-tG1" firstAttribute="top" secondItem="t6A-l7-8Hz" secondAttribute="top" constant="11" id="A4U-E3-f0v"/>
+                                        <constraint firstAttribute="trailing" secondItem="W5t-RR-G6N" secondAttribute="trailing" constant="8" id="D9s-iL-LUX"/>
+                                        <constraint firstItem="0I8-Ih-uPL" firstAttribute="leading" secondItem="Y3M-02-tG1" secondAttribute="trailing" constant="8" id="QXB-kR-Y9z"/>
+                                        <constraint firstItem="W5t-RR-G6N" firstAttribute="top" secondItem="t6A-l7-8Hz" secondAttribute="top" constant="7" id="TNS-Lb-o2r"/>
+                                        <constraint firstItem="W5t-RR-G6N" firstAttribute="leading" secondItem="0I8-Ih-uPL" secondAttribute="trailing" constant="1" id="hmP-Tm-EC2"/>
+                                        <constraint firstAttribute="centerY" secondItem="0I8-Ih-uPL" secondAttribute="centerY" constant="-0.5" id="rAk-Bb-PTv"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addContactButton" destination="W5t-RR-G6N" id="zBE-T7-0WG"/>
+                                    <outlet property="contentTextField" destination="0I8-Ih-uPL" id="osw-Gh-yNw"/>
+                                    <outlet property="headerLabel" destination="Y3M-02-tG1" id="8Yx-JT-tGn"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DLEditMailContentTableViewCell" rowHeight="159" id="fjD-ea-SgL" customClass="DLEditMailContentTableViewCell">
+                                <rect key="frame" x="0.0" y="110" width="768" height="159"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fjD-ea-SgL" id="Pg0-JQ-FC2">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfy-5k-vqb">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jfy-5k-vqb" secondAttribute="bottom" id="Ovv-OL-doc"/>
+                                        <constraint firstItem="jfy-5k-vqb" firstAttribute="leading" secondItem="Pg0-JQ-FC2" secondAttribute="leading" id="WeY-hK-7vo"/>
+                                        <constraint firstAttribute="trailing" secondItem="jfy-5k-vqb" secondAttribute="trailing" id="cTV-tE-n2C"/>
+                                        <constraint firstItem="jfy-5k-vqb" firstAttribute="top" secondItem="Pg0-JQ-FC2" secondAttribute="top" id="hwF-fI-Tfr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contentTextView" destination="jfy-5k-vqb" id="QMi-ij-QHa"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1zi-yP-6cn" id="OUH-Rx-Nld"/>
+                            <outlet property="delegate" destination="1zi-yP-6cn" id="2zd-k0-w97"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymL-j4-iW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="-5012"/>
+        </scene>
         <!--Mail View Controller-->
         <scene sceneID="svf-bb-7dy">
             <objects>
@@ -864,7 +976,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nb-yA-Ylv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="-4911"/>
+            <point key="canvasLocation" x="1172" y="-5012"/>
         </scene>
         <!--Navigation Panel View Controller-->
         <scene sceneID="nfw-hh-TuY">
